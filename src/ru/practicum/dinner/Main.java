@@ -14,7 +14,7 @@ public class Main {
 
         while (true) {
             printMenu();
-            String command = scanner.nextLine();
+            String command = scanner.nextLine().trim();
 
             switch (command) {
                 case "1":
@@ -38,9 +38,9 @@ public class Main {
 
     private static void addNewDish() {
         System.out.println("Введите тип блюда:");
-        String dishType = scanner.nextLine();
+        String dishType = scanner.nextLine().trim();
         System.out.println("Введите название блюда:");
-        String dishName = scanner.nextLine();
+        String dishName = scanner.nextLine().trim();
 
         dc.addDinner(dishType, dishName); // добавьте новое блюдо
     }
@@ -59,7 +59,7 @@ public class Main {
 
         // реализуйте ввод типов блюд
         while (true) {
-            nextItem = scanner.nextLine();
+            nextItem = scanner.nextLine().trim();
             if (dc.checkType(nextItem)) {
                 dishTypes.add(nextItem);
             } else if (nextItem.isEmpty()) {
